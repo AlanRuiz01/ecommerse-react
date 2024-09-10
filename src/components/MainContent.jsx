@@ -7,7 +7,8 @@ const products = [
   { id: 6, name: "Traje", price: 1500000, image: "/images/traje.jpg" },
 ];
 
-export default function MainContent() {
+// eslint-disable-next-line react/prop-types
+export default function MainContent({addToCart}) {
   return (
     <main className="flex-grow container mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold mb-6">Lista de Productos</h2>
@@ -24,7 +25,12 @@ export default function MainContent() {
             <div className="p-4">
               <h3 className="font-semibold text-lg mb-2">{product.name}</h3>
               <p className="text-muted-foreground mb-4">Gs.{product.price}</p>
-              <button className="w-full ">Añadir al carro</button>
+              <button 
+                className="w-full bg-blue-500 text-white px-4 py-2 rounded"
+                onClick={() => addToCart(product)} // Añadir al carrito
+              >
+                Añadir al carro
+              </button>
             </div>
           </div>
         ))}
