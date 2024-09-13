@@ -27,7 +27,7 @@ export default function MainContent({addToCart}) {
               <p className="text-muted-foreground mb-4">Gs.{product.price}</p>
               <button 
                 className="w-full bg-blue-500 text-white px-4 py-2 rounded"
-                onClick={() => addToCart(product)} // Añadir al carrito
+                onClick={() => addToCart(product)}
               >
                 Añadir al carro
               </button>
